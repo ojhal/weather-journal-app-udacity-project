@@ -23,3 +23,11 @@ const port = 8000;
 const server = app.listen(port, function() {
     console.log('running on localhost: ${port}');
 });
+//GET route returns ProjectData
+app.get('/all', function (request, response) {
+    response.send(projectData);
+});
+// POST route adds data to projectData
+app.post('/add', function (request,response) {
+    
+}
