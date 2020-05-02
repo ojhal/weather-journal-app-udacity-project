@@ -3,8 +3,7 @@ projectData = {};
 
 // Require Express to run server and routes
 const express = require('express');
-const cors = require('cors');
-const bodyParser = require('bodyParser');
+
 // Start up an instance of app
 const app = express();
 
@@ -26,7 +25,7 @@ app.use(express.static('website'));
 
 
 // Setup Server
-const port = 8080;
+const port = 8000;
 const server = app.listen(port, listening); 
 
 function listening(){
