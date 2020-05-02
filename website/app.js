@@ -12,11 +12,11 @@ document.getElementById('generate').addEventListener('click', performAction);
 
 // Function called by event listener //
 function performAction(event) {
-    const zipCode = document.getElementById('zip').value;
+    const postCode = document.getElementById('zip').value;
     const feelings = document.getElementById('feelings').value;
     console.log(newDate);
 
-    getTemperature(baseURL, zipCode, appID)
+    getTemperature(baseURL, postCode, appID)
         .then(function (data) {
             // Add data to POST request //
             postData('http://localhost:8080/addWeatherData', { temperature: data.main.temp, date: newDate, user_response: feelings })
